@@ -27,14 +27,18 @@ class Element(object):
         else:
             self.content = [content]
     def __repr__(self):
-        return str(self.content)
+        full_string = ""
+        for c in self.content:
+            full_string += str(c)
+            full_string += "\n"
+        return full_string
     def append(self, new_content):
         self.content.append(new_content)
     def render(self, out_file, cur_ind=""):
-        out_file.write("<" + self.tag_name + ">\n")
+        out_file.write("<" + self.tag_name + ">")
         #pdb.set_trace()
         for c in self.content:
-            out_file.write(str(c) + "\n")
+            out_file.write(str(c))
         out_file.write("</" + self.tag_name + ">")
 
 #Step 2 Part A
