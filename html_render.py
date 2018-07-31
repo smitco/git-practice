@@ -17,6 +17,7 @@ class Element(object):
 
 # link to exercise: https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/html_renderer.html#html-primer
 
+import pdb
 #Step 1
 class Element(object):
     def __init__(self, content=None):
@@ -29,6 +30,7 @@ class Element(object):
         self.content.append(new_content)
     def render(self, out_file, cur_ind=""):
         out_file.write("<" + self.tag_name + ">\n")
+        pdb.set_trace()
         for c in self.content:
             out_file.write(str(c) + "\n")
         out_file.write("</" + self.tag_name + ">")
