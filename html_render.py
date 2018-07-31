@@ -20,7 +20,7 @@ class Element(object):
 #Step 1
 class Element(object):
     def __init__(self, content=None):
-        self.tagname = ""
+        self.tag_name = ""
         if content is None:
             self.content = []
         else:
@@ -36,15 +36,15 @@ class Element(object):
 #Step 2 Part A
 class Html(Element):
     def __init__(self, content=None):
-        super(Html, self).__init(content=content)
+        super(Html, self).__init__(content=content)
         self.tag_name = "html"
 
 class Body(Element):
     def __init__(self, content=None):
-        super(Body, self).__init(content=content)
+        super(Body, self).__init__(content=content)
         self.tag_name = "body"
 
 class P(Element):
     def __init__(self, content=None):
-        super(P, self).__init(content=content)
+        super(P, self).__init__(content=content)
         self.tag_name = "p"
