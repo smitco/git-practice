@@ -21,16 +21,18 @@ import pdb
 #Step 1
 class Element(object):
     def __init__(self, content=None):
-        self.tag_name = ""
+        self.tag_name = "html"
         if content is None:
             self.content = []
         else:
             self.content = [content]
+    def __repr__(self):
+        return str(self.content)
     def append(self, new_content):
         self.content.append(new_content)
     def render(self, out_file, cur_ind=""):
         out_file.write("<" + self.tag_name + ">\n")
-        pdb.set_trace()
+        #pdb.set_trace()
         for c in self.content:
             out_file.write(str(c) + "\n")
         out_file.write("</" + self.tag_name + ">")
