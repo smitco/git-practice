@@ -55,7 +55,7 @@ page = hr.Html()
 
 body = hr.Body()
 
-body.append(hr.P("Here is a paragraph of text -- there could be more of them, "
+body.append(hr.P("2Here is a paragraph of text -- there could be more of them, "
                  "but this is enough  to show that we can do some text"))
 
 body.append(hr.P("And here is another piece of text -- you should be able to add any number"))

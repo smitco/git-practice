@@ -30,15 +30,17 @@ class Element(object):
         full_string = ""
         for c in self.content:
             full_string += str(c)
-            full_string += "\n"
+            #full_string += "\n"
         return full_string
     def append(self, new_content):
         self.content.append(new_content)
     def render(self, out_file, cur_ind=""):
-        out_file.write("<" + self.tag_name + ">")
+        out_file.write("<" + self.tag_name + ">\n")
         #pdb.set_trace()
         for c in self.content:
             out_file.write(str(c))
+            out_file.write("\n")
+        #out_file.write(full_string)
         out_file.write("</" + self.tag_name + ">")
 
 #Step 2 Part A
